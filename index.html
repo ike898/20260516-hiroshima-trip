@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>広島・宮島 日帰り強行プラン</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Hiragino Kaku Gothic ProN', 'Noto Sans JP', sans-serif;
+      background: #f5f0e8;
+      color: #333;
+      min-height: 100vh;
+    }
+    header {
+      background: linear-gradient(135deg, #8b0000 0%, #c0392b 60%, #e74c3c 100%);
+      color: white;
+      padding: 2.5rem 1.5rem 2rem;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    header::before {
+      content: '⛩️';
+      position: absolute;
+      font-size: 8rem;
+      opacity: 0.1;
+      right: -1rem;
+      top: -1rem;
+    }
+    header h1 {
+      font-size: 1.8rem;
+      font-weight: 900;
+      letter-spacing: 0.05em;
+      text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+    }
+    header .subtitle {
+      margin-top: 0.5rem;
+      font-size: 0.95rem;
+      opacity: 0.9;
+    }
+    .meta-chips {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      justify-content: center;
+      margin-top: 1rem;
+    }
+    .chip {
+      background: rgba(255,255,255,0.2);
+      border: 1px solid rgba(255,255,255,0.4);
+      border-radius: 999px;
+      padding: 0.25rem 0.75rem;
+      font-size: 0.8rem;
+    }
+    main {
+      max-width: 700px;
+      margin: 0 auto;
+      padding: 1.5rem 1rem 3rem;
+    }
+    .section {
+      background: white;
+      border-radius: 12px;
+      padding: 1.5rem;
+      margin-bottom: 1.25rem;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+    }
+    .section-title {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-size: 1.1rem;
+      font-weight: 800;
+      color: #8b0000;
+      margin-bottom: 1rem;
+      padding-bottom: 0.5rem;
+      border-bottom: 2px solid #f0e0e0;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.88rem;
+    }
+    th {
+      background: #8b0000;
+      color: white;
+      padding: 0.5rem 0.75rem;
+      text-align: left;
+      font-weight: 700;
+    }
+    th:first-child { border-radius: 6px 0 0 0; }
+    th:last-child { border-radius: 0 6px 0 0; }
+    td {
+      padding: 0.55rem 0.75rem;
+      border-bottom: 1px solid #f0e8e8;
+      vertical-align: top;
+    }
+    tr:last-child td { border-bottom: none; }
+    tr:nth-child(even) td { background: #fdf8f8; }
+    td:first-child {
+      font-weight: 700;
+      color: #8b0000;
+      white-space: nowrap;
+      width: 5.5rem;
+    }
+    .cost-table td:first-child {
+      color: #333;
+      font-weight: 400;
+    }
+    .cost-table .total td {
+      font-weight: 900;
+      color: #8b0000;
+      background: #fff0f0;
+    }
+    .lunch-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 0.4rem;
+    }
+    .lunch-list li {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.5rem;
+      padding: 0.5rem 0.75rem;
+      background: #fdf8f8;
+      border-radius: 8px;
+      font-size: 0.9rem;
+    }
+    .lunch-list li::before {
+      content: '🍽️';
+      flex-shrink: 0;
+    }
+    .tips-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+    .tips-list li {
+      padding: 0.5rem 0.75rem;
+      background: #fff8e1;
+      border-left: 3px solid #f5a623;
+      border-radius: 0 8px 8px 0;
+      font-size: 0.88rem;
+      line-height: 1.5;
+    }
+    .insurance-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+    .insurance-list li {
+      padding: 0.5rem 0.75rem;
+      background: #e8f4fd;
+      border-left: 3px solid #2980b9;
+      border-radius: 0 8px 8px 0;
+      font-size: 0.88rem;
+      line-height: 1.5;
+    }
+    .ic-note {
+      margin-top: 0.75rem;
+      font-size: 0.8rem;
+      color: #888;
+      text-align: right;
+    }
+    footer {
+      text-align: center;
+      font-size: 0.75rem;
+      color: #aaa;
+      padding: 1.5rem;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>⛩️ 広島・宮島 日帰り強行プラン</h1>
+  <div class="subtitle">出発地: JR広島駅 ／ 広島駅戻り目標: 14:00</div>
+  <div class="meta-chips">
+    <span class="chip">🕗 出発 9:35〜</span>
+    <span class="chip">🏝️ 島内 約1時間50分</span>
+    <span class="chip">💴 交通+拝観 約1,640円</span>
+  </div>
+</header>
+
+<main>
+
+  <div class="section">
+    <div class="section-title">🚃 行き</div>
+    <table>
+      <thead>
+        <tr><th>時刻</th><th>動き</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>9:35〜9:45</td><td>在来線改札通過 → 山陽本線ホームへ</td></tr>
+        <tr><td>〜10:00</td><td>JR山陽本線「岩国行き」乗車（1〜4番ホーム、頻発）</td></tr>
+        <tr><td>10:25</td><td>宮島口駅着（約25分）</td></tr>
+        <tr><td>10:30</td><td>地下通路でフェリーターミナルへ徒歩約5分</td></tr>
+        <tr><td>10:35〜10:45</td><td>フェリー乗船（JR西日本宮島フェリー推奨 = 大鳥居便）</td></tr>
+        <tr><td>10:55</td><td>宮島桟橋到着</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="section">
+    <div class="section-title">🦌 島内（10:55〜12:45 / 約1時間50分）</div>
+    <table>
+      <thead>
+        <tr><th>時刻</th><th>動き</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>10:55〜11:10</td><td>桟橋 → 表参道商店街 → 厳島神社（徒歩約15分）</td></tr>
+        <tr><td>11:10〜11:40</td><td>厳島神社参拝（拝観料300円）、大鳥居撮影</td></tr>
+        <tr><td>11:40〜12:30</td><td>ランチ＆食べ歩き</td></tr>
+        <tr><td>12:30〜12:45</td><td>土産物色しつつ桟橋へ</td></tr>
+      </tbody>
+    </table>
+
+    <div style="margin-top:1rem">
+      <div style="font-size:0.85rem;font-weight:700;color:#8b0000;margin-bottom:0.5rem;">🍜 ランチ候補</div>
+      <ul class="lunch-list">
+        <li>あなごめし: うえの / ふじたや</li>
+        <li>牡蠣屋台</li>
+        <li>焼きたてもみじ饅頭 ＠ 紅葉堂（揚げもみじも名物）</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-title">🚃 帰り</div>
+    <table>
+      <thead>
+        <tr><th>時刻</th><th>動き</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>12:50〜13:00</td><td>フェリー乗船</td></tr>
+        <tr><td>13:10</td><td>宮島口着</td></tr>
+        <tr><td>13:10〜13:20</td><td>JR宮島口駅へ → 広島行き乗車</td></tr>
+        <tr><td>13:45</td><td>広島駅着（14:00まで15分余裕）</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="section">
+    <div class="section-title">💴 料金（往復）</div>
+    <table class="cost-table">
+      <thead>
+        <tr><th>項目</th><th>金額</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>JR広島⇄宮島口（往復）</td><td>約840円</td></tr>
+        <tr><td>フェリー（往復）</td><td>400円</td></tr>
+        <tr><td>宮島訪問税</td><td>100円</td></tr>
+        <tr><td>厳島神社拝観料</td><td>300円</td></tr>
+        <tr class="total"><td>合計（交通+拝観）</td><td>約1,640円</td></tr>
+      </tbody>
+    </table>
+    <p class="ic-note">※ ICOCA / Suica など全国系ICカード対応</p>
+  </div>
+
+  <div class="section">
+    <div class="section-title">📌 ポイント</div>
+    <ul class="tips-list">
+      <li>行きフェリーは <strong>JR西日本側</strong> に並ぶ（9:10〜16:10は大鳥居便で鳥居に接近）</li>
+      <li>帰りは早く着いた方の便でOK</li>
+      <li>弥山ロープウェイは今回は無理（半日コース必要）</li>
+      <li>🦌 鹿はかわいいが荷物注意</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <div class="section-title">🛟 保険プラン</div>
+    <ul class="insurance-list">
+      <li>12:45の桟橋着を死守</li>
+      <li>12:50便に乗れなかった場合は13:00便でも広島駅14:00着可能だが余裕ゼロ</li>
+      <li>1本でも遅れたらタクシー判断</li>
+    </ul>
+  </div>
+
+</main>
+
+<footer>広島・宮島 日帰りプラン 2026-05-16</footer>
+
+</body>
+</html>

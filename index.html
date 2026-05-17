@@ -171,6 +171,26 @@
       color: #888;
       text-align: right;
     }
+    details {
+      margin-top: 1rem;
+    }
+    summary {
+      cursor: pointer;
+      font-size: 0.85rem;
+      font-weight: 700;
+      color: #aaa;
+      list-style: none;
+      padding: 0.4rem 0;
+      border-top: 1px dashed #e0e0e0;
+    }
+    summary::-webkit-details-marker { display: none; }
+    summary::before {
+      content: '▶ ';
+      font-size: 0.7rem;
+    }
+    details[open] summary::before {
+      content: '▼ ';
+    }
     footer {
       text-align: center;
       font-size: 0.75rem;
@@ -223,14 +243,14 @@
       </tbody>
     </table>
 
-    <div style="margin-top:1rem">
-      <div style="font-size:0.85rem;font-weight:700;color:#8b0000;margin-bottom:0.5rem;">🍜 ランチ候補</div>
-      <ul class="lunch-list">
+    <details>
+      <summary>ランチ候補（検討メモ）</summary>
+      <ul class="lunch-list" style="margin-top:0.5rem">
         <li>あなごめし: うえの / ふじたや</li>
         <li>牡蠣屋台</li>
         <li>焼きたてもみじ饅頭 ＠ 紅葉堂（揚げもみじも名物）</li>
       </ul>
-    </div>
+    </details>
   </div>
 
   <div class="section">
@@ -286,36 +306,35 @@
           <small>✅ 蔵屋デラックス（生エビ・生イカ・ネギ・イカ天）そば 1,400円</small><br>
           <small>✅ 広島名物 ウニホーレンバケット添え 2,000円</small><br>
           <small>✅ 生ビール 600円</small></td></tr>
-        <tr><td>遅めに</td><td>ニュージャパンEX チェックイン・サウナ</td></tr>
+        <tr><td>遅めに</td><td>ニュージャパンEX チェックイン・サウナ<br><small>✅ まぁまぁ良かった。ネットでは80℃台の記載が多いが体感はそれより熱め</small></td></tr>
       </tbody>
     </table>
 
-    <div style="margin-top:1rem">
-      <div style="font-size:0.85rem;font-weight:700;color:#8b0000;margin-bottom:0.5rem;">🍽️ 夕飯候補</div>
-      <ul class="lunch-list">
+    <details>
+      <summary>夕飯候補（検討メモ）</summary>
+      <ul class="lunch-list" style="margin-top:0.5rem">
         <li style="flex-direction:column;align-items:flex-start;gap:0.2rem"><strong>第1希望：ウニホーレン＋一杯</strong><span style="font-size:0.8rem;color:#666">→ <strong>十升 流川通り店</strong>（流川町8-13・ホテルから徒歩3分・15時〜営業）/ ウニホーレン1,200円　※薬研堀店は21時〜なので注意</span></li>
         <li style="flex-direction:column;align-items:flex-start;gap:0.2rem"><strong>第2希望：広島お好み焼き</strong><span style="font-size:0.8rem;color:#666">→ <strong>八昌 薬研堀</strong>（ホテル目の前・食べログ百名店2025）or <strong>みっちゃん総本店</strong>（八丁堀・徒歩10分）</span></li>
         <li style="flex-direction:column;align-items:flex-start;gap:0.2rem"><strong>第3希望：あなごめし</strong><span style="font-size:0.8rem;color:#666">→ 薬研堀周辺では少なめ。広島駅前か市内の専門店を現地検索推奨</span></li>
       </ul>
-    </div>
+    </details>
   </div>
 
 
-    <ul class="tips-list">
-      <li>行きフェリーは <strong>JR西日本側</strong> に並ぶ（9:10〜16:10は大鳥居便で鳥居に接近）</li>
-      <li>帰りは早く着いた方の便でOK</li>
-      <li>弥山ロープウェイは今回は無理（半日コース必要）</li>
-      <li>🦌 鹿はかわいいが荷物注意</li>
-    </ul>
-  </div>
-
-  <div class="section">
-    <div class="section-title">🛟 保険プラン</div>
-    <ul class="insurance-list">
-      <li>12:35の桟橋着を目安（早着分の余裕あり）</li>
-      <li>12:40便に乗れなかった場合は12:50便でも広島駅14:00着可能（余裕10分程度）</li>
-      <li>1本でも遅れたらタクシー判断</li>
-    </ul>
+    <details>
+      <summary>ポイント・保険プラン（検討メモ）</summary>
+      <ul class="tips-list" style="margin-top:0.5rem">
+        <li>行きフェリーは <strong>JR西日本側</strong> に並ぶ（9:10〜16:10は大鳥居便で鳥居に接近）</li>
+        <li>帰りは早く着いた方の便でOK</li>
+        <li>弥山ロープウェイは今回は無理（半日コース必要）</li>
+        <li>🦌 鹿はかわいいが荷物注意</li>
+      </ul>
+      <ul class="insurance-list" style="margin-top:0.5rem">
+        <li>12:35の桟橋着を目安（早着分の余裕あり）</li>
+        <li>12:40便に乗れなかった場合は12:50便でも広島駅14:00着可能（余裕10分程度）</li>
+        <li>1本でも遅れたらタクシー判断</li>
+      </ul>
+    </details>
   </div>
 
 </main>

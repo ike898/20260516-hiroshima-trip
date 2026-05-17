@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>広島・宮島 観光プラン 2026-05-16</title>
+  <title>広島・宮島 観光記録 2026-05-16</title>
   <style>
     * { box-sizing: border-box; margin: 0; padding: 0; }
     body {
@@ -94,102 +94,74 @@
       padding: 0.55rem 0.75rem;
       border-bottom: 1px solid #f0e8e8;
       vertical-align: top;
+      line-height: 1.6;
     }
     tr:last-child td { border-bottom: none; }
     tr:nth-child(even) td { background: #fdf8f8; }
-    tr.now td {
-      background: #fff3cd !important;
-    }
-    tr.now td:first-child {
-      color: #d97706 !important;
-    }
     td:first-child {
       font-weight: 700;
       color: #8b0000;
       white-space: nowrap;
       width: 5.5rem;
     }
+    .divider td {
+      background: #f5f0e8 !important;
+      font-size: 0.78rem;
+      font-weight: 700;
+      color: #999;
+      letter-spacing: 0.05em;
+      padding: 0.3rem 0.75rem;
+    }
+    small { font-size: 0.8rem; color: #777; }
     .cost-table td:first-child {
-      color: #333;
+      color: #555;
       font-weight: 400;
+    }
+    .cost-table .subtotal td {
+      font-weight: 700;
+      color: #8b0000;
+      background: #fff8f8;
+      font-size: 0.85rem;
     }
     .cost-table .total td {
       font-weight: 900;
       color: #8b0000;
       background: #fff0f0;
+      font-size: 0.95rem;
     }
-    .lunch-list {
-      list-style: none;
-      display: flex;
-      flex-direction: column;
-      gap: 0.4rem;
-    }
-    .lunch-list li {
-      display: flex;
-      align-items: flex-start;
-      gap: 0.5rem;
-      padding: 0.5rem 0.75rem;
-      background: #fdf8f8;
-      border-radius: 8px;
-      font-size: 0.9rem;
-    }
-    .lunch-list li::before {
-      content: '🍽️';
-      flex-shrink: 0;
-    }
-    .tips-list {
-      list-style: none;
-      display: flex;
-      flex-direction: column;
-      gap: 0.5rem;
-    }
-    .tips-list li {
-      padding: 0.5rem 0.75rem;
-      background: #fff8e1;
-      border-left: 3px solid #f5a623;
-      border-radius: 0 8px 8px 0;
-      font-size: 0.88rem;
-      line-height: 1.5;
-    }
-    .insurance-list {
-      list-style: none;
-      display: flex;
-      flex-direction: column;
-      gap: 0.5rem;
-    }
-    .insurance-list li {
-      padding: 0.5rem 0.75rem;
-      background: #e8f4fd;
-      border-left: 3px solid #2980b9;
-      border-radius: 0 8px 8px 0;
-      font-size: 0.88rem;
-      line-height: 1.5;
-    }
-    .ic-note {
-      margin-top: 0.75rem;
-      font-size: 0.8rem;
-      color: #888;
-      text-align: right;
+    .cost-table .skipped td {
+      color: #bbb;
     }
     details {
       margin-top: 1rem;
     }
     summary {
       cursor: pointer;
-      font-size: 0.85rem;
+      font-size: 0.82rem;
       font-weight: 700;
-      color: #aaa;
+      color: #bbb;
       list-style: none;
       padding: 0.4rem 0;
-      border-top: 1px dashed #e0e0e0;
+      border-top: 1px dashed #e8e8e8;
     }
     summary::-webkit-details-marker { display: none; }
-    summary::before {
-      content: '▶ ';
-      font-size: 0.7rem;
+    summary::before { content: '▶ '; font-size: 0.65rem; }
+    details[open] summary::before { content: '▼ '; }
+    .memo-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 0.4rem;
+      margin-top: 0.5rem;
     }
-    details[open] summary::before {
-      content: '▼ ';
+    .memo-list li {
+      padding: 0.45rem 0.75rem;
+      background: #fafafa;
+      border-left: 3px solid #ddd;
+      border-radius: 0 6px 6px 0;
+      font-size: 0.82rem;
+      color: #666;
+      line-height: 1.5;
     }
     footer {
       text-align: center;
@@ -202,144 +174,113 @@
 <body>
 
 <header>
-  <h1>⛩️ 広島・宮島 観光プラン</h1>
-  <div class="subtitle">出発地: JR広島駅 ／ 広島駅戻り目標: 14:00　✅ 完走！</div>
+  <h1>⛩️ 広島・宮島 観光記録</h1>
+  <div class="subtitle">2026-05-16（日帰り＋1泊）✅ 完走</div>
   <div class="meta-chips">
-    <span class="chip">🕗 出発 9:45</span>
-    <span class="chip">🏝️ 島内 約2時間（10:35〜）</span>
-    <span class="chip">💴 交通 約1,340円</span>
+    <span class="chip">🕗 広島駅 9:45発</span>
+    <span class="chip">🏝️ 宮島 約2時間</span>
+    <span class="chip">🍶 薬研堀で夜飯</span>
+    <span class="chip">💴 総額 約7,470円</span>
   </div>
 </header>
 
 <main>
 
   <div class="section">
-    <div class="section-title">🚃 行き</div>
+    <div class="section-title">📅 行程</div>
     <table>
       <thead>
         <tr><th>時刻</th><th>動き</th></tr>
       </thead>
       <tbody>
-        <tr><td>9:45</td><td>広島駅発（JR山陽本線 大野浦行き、乗車済み）</td></tr>
-        <tr><td>10:11</td><td>宮島口駅着（26分）</td></tr>
-        <tr><td>10:16</td><td>地下通路でフェリーターミナルへ徒歩約5分</td></tr>
-        <tr><td>10:25</td><td>フェリー乗船（JR西日本宮島フェリー = 大鳥居便）※予定より5分早く乗船</td></tr>
-        <tr><td>10:35</td><td>宮島桟橋到着</td></tr>
-      </tbody>
-    </table>
-  </div>
-
-  <div class="section">
-    <div class="section-title">🦌 島内（10:35〜12:35 / 約2時間）</div>
-    <table>
-      <thead>
-        <tr><th>時刻</th><th>動き</th></tr>
-      </thead>
-      <tbody>
-        <tr><td>10:35〜10:50</td><td>桟橋 → 表参道商店街 → 厳島神社（徒歩約15分）</td></tr>
-        <tr><td>10:50〜11:10</td><td>大鳥居撮影（参拝は列が長く断念）</td></tr>
-        <tr><td>11:10〜12:20</td><td>ランチ＆食べ歩き<br><small>✅ 岩村もみじ屋：つぶ・こし 各1個 140円×2＝280円</small><br><small>✅ 牡蠣2個 600円、生ビール 600円</small></td></tr>
-        <tr><td>12:20〜12:35</td><td>土産物色しつつ桟橋へ</td></tr>
-      </tbody>
-    </table>
-
-    <details>
-      <summary>ランチ候補（検討メモ）</summary>
-      <ul class="lunch-list" style="margin-top:0.5rem">
-        <li>あなごめし: うえの / ふじたや</li>
-        <li>牡蠣屋台</li>
-        <li>焼きたてもみじ饅頭 ＠ 紅葉堂（揚げもみじも名物）</li>
-      </ul>
-    </details>
-  </div>
-
-  <div class="section">
-    <div class="section-title">🚃 帰り</div>
-    <table>
-      <thead>
-        <tr><th>時刻</th><th>動き</th></tr>
-      </thead>
-      <tbody>
+        <tr class="divider"><td colspan="2">— 午前・宮島 —</td></tr>
+        <tr><td>9:45</td><td>広島駅発（JR山陽本線 大野浦行き）</td></tr>
+        <tr><td>10:11</td><td>宮島口駅着 → 地下通路でフェリーターミナルへ</td></tr>
+        <tr><td>10:25</td><td>フェリー乗船（JR西日本・大鳥居便）<small>※予定より5分早い便</small></td></tr>
+        <tr><td>10:35</td><td>宮島桟橋着</td></tr>
+        <tr><td>10:35〜10:50</td><td>桟橋 → 表参道商店街 → 厳島神社へ徒歩</td></tr>
+        <tr><td>10:50〜11:10</td><td>大鳥居撮影　<small>※参拝は行列で断念</small></td></tr>
+        <tr><td>11:10〜12:20</td><td>食べ歩き<br>
+          <small>✅ 岩村もみじ屋：つぶ・こし 各1個（280円）</small><br>
+          <small>✅ 牡蠣2個（600円）＋ 生ビール（600円）</small></td></tr>
+        <tr><td>12:20〜12:35</td><td>土産を物色しつつ桟橋へ</td></tr>
+        <tr class="divider"><td colspan="2">— 帰り —</td></tr>
         <tr><td>12:40〜12:50</td><td>フェリー乗船（帰り）</td></tr>
-        <tr><td>12:50〜13:00</td><td>宮島口着<br><small>✅ 揚げもみじ 250円、アイスコーヒー 400円</small></td></tr>
+        <tr><td>12:50〜13:00</td><td>宮島口着<br>
+          <small>✅ 揚げもみじ（250円）＋ アイスコーヒー（400円）</small></td></tr>
         <tr><td>13:04</td><td>JR宮島口駅 広島行き乗車</td></tr>
-        <tr><td>13:35頃</td><td>広島駅着 ✅ 完走！</td></tr>
+        <tr><td>13:35頃</td><td>広島駅着 ✅</td></tr>
+        <tr class="divider"><td colspan="2">— 夜・薬研堀 —</td></tr>
+        <tr><td>18:00〜</td><td>自由時間 → 広島駅から薬研堀まで徒歩（約20分）</td></tr>
+        <tr><td>18:20〜</td><td>夕飯 @ お好み焼き・鉄板焼き 蔵屋こまち店<br>
+          <small>✅ 蔵屋デラックス（生エビ・生イカ・ネギ・イカ天）そば（1,400円）</small><br>
+          <small>✅ 広島名物 ウニホーレンバケット添え（2,000円）</small><br>
+          <small>✅ 生ビール（600円）</small></td></tr>
+        <tr><td>遅めに</td><td>ニュージャパンEX チェックイン・サウナ<br>
+          <small>✅ まぁまぁ良かった。ネットでは80℃台の記載が多いが体感はそれより熱め</small></td></tr>
       </tbody>
     </table>
   </div>
 
   <div class="section">
-    <div class="section-title">💴 料金（往復）</div>
+    <div class="section-title">💴 支出まとめ</div>
     <table class="cost-table">
       <thead>
         <tr><th>項目</th><th>金額</th></tr>
       </thead>
       <tbody>
-        <tr><td>JR広島⇄宮島口（往復）</td><td>約840円</td></tr>
+        <tr class="divider"><td colspan="2">— 交通費 —</td></tr>
+        <tr><td>JR 広島⇄宮島口（往復）</td><td>約840円</td></tr>
         <tr><td>フェリー（往復）</td><td>400円</td></tr>
         <tr><td>宮島訪問税</td><td>100円</td></tr>
-        <tr><td>厳島神社拝観料</td><td><s>300円</s> 断念</td></tr>
+        <tr class="subtotal"><td>交通費 小計</td><td>約1,340円</td></tr>
+        <tr class="divider"><td colspan="2">— 飲食費 —</td></tr>
+        <tr class="skipped"><td>厳島神社拝観料</td><td><s>300円</s>　断念</td></tr>
         <tr><td>岩村もみじ屋（つぶ・こし各1）</td><td>280円</td></tr>
         <tr><td>牡蠣2個</td><td>600円</td></tr>
-        <tr><td>生ビール</td><td>600円</td></tr>
+        <tr><td>生ビール（島内）</td><td>600円</td></tr>
         <tr><td>揚げもみじ</td><td>250円</td></tr>
         <tr><td>アイスコーヒー</td><td>400円</td></tr>
-        <tr><td>蔵屋デラックスそば（蔵屋こまち）</td><td>1,400円</td></tr>
-        <tr><td>ウニホーレンバケット添え（蔵屋こまち）</td><td>2,000円</td></tr>
-        <tr><td>生ビール（蔵屋こまち）</td><td>600円</td></tr>
-        <tr class="total"><td>合計</td><td>約7,470円</td></tr>
+        <tr><td>蔵屋デラックスそば</td><td>1,400円</td></tr>
+        <tr><td>ウニホーレンバケット添え</td><td>2,000円</td></tr>
+        <tr><td>生ビール（夜）</td><td>600円</td></tr>
+        <tr class="subtotal"><td>飲食費 小計</td><td>6,130円</td></tr>
+        <tr class="total"><td>総合計</td><td>約7,470円</td></tr>
       </tbody>
     </table>
-    <p class="ic-note">※ ICOCA / Suica など全国系ICカード対応</p>
   </div>
 
   <div class="section">
-    <div class="section-title">🌆 夜のプラン（18:00〜）</div>
+    <div class="section-title">🏨 宿泊</div>
     <table>
       <thead>
-        <tr><th>時刻</th><th>動き</th></tr>
+        <tr><th>項目</th><th>メモ</th></tr>
       </thead>
       <tbody>
-        <tr><td>18:00</td><td>自由時間スタート・広島駅</td></tr>
-        <tr><td>18:00〜18:20</td><td>広島駅 → 薬研堀まで徒歩（約20分）</td></tr>
-        <tr><td>18:20〜</td><td>夕飯＆一杯 @ お好み焼き・鉄板焼き 蔵屋こまち店<br>
-          <small>✅ 蔵屋デラックス（生エビ・生イカ・ネギ・イカ天）そば 1,400円</small><br>
-          <small>✅ 広島名物 ウニホーレンバケット添え 2,000円</small><br>
-          <small>✅ 生ビール 600円</small></td></tr>
-        <tr><td>遅めに</td><td>ニュージャパンEX チェックイン・サウナ<br><small>✅ まぁまぁ良かった。ネットでは80℃台の記載が多いが体感はそれより熱め</small></td></tr>
+        <tr><td>宿</td><td>カプセルホテル＆サウナ ニュージャパンEX（広島市中区薬研堀8-8）</td></tr>
+        <tr><td>サウナ</td><td>まぁまぁ良かった。ネット情報は80℃台だが体感はそれより熱め</td></tr>
       </tbody>
     </table>
-
-    <details>
-      <summary>夕飯候補（検討メモ）</summary>
-      <ul class="lunch-list" style="margin-top:0.5rem">
-        <li style="flex-direction:column;align-items:flex-start;gap:0.2rem"><strong>第1希望：ウニホーレン＋一杯</strong><span style="font-size:0.8rem;color:#666">→ <strong>十升 流川通り店</strong>（流川町8-13・ホテルから徒歩3分・15時〜営業）/ ウニホーレン1,200円　※薬研堀店は21時〜なので注意</span></li>
-        <li style="flex-direction:column;align-items:flex-start;gap:0.2rem"><strong>第2希望：広島お好み焼き</strong><span style="font-size:0.8rem;color:#666">→ <strong>八昌 薬研堀</strong>（ホテル目の前・食べログ百名店2025）or <strong>みっちゃん総本店</strong>（八丁堀・徒歩10分）</span></li>
-        <li style="flex-direction:column;align-items:flex-start;gap:0.2rem"><strong>第3希望：あなごめし</strong><span style="font-size:0.8rem;color:#666">→ 薬研堀周辺では少なめ。広島駅前か市内の専門店を現地検索推奨</span></li>
-      </ul>
-    </details>
   </div>
 
-
+  <div class="section">
     <details>
-      <summary>ポイント・保険プラン（検討メモ）</summary>
-      <ul class="tips-list" style="margin-top:0.5rem">
-        <li>行きフェリーは <strong>JR西日本側</strong> に並ぶ（9:10〜16:10は大鳥居便で鳥居に接近）</li>
-        <li>帰りは早く着いた方の便でOK</li>
-        <li>弥山ロープウェイは今回は無理（半日コース必要）</li>
-        <li>🦌 鹿はかわいいが荷物注意</li>
-      </ul>
-      <ul class="insurance-list" style="margin-top:0.5rem">
-        <li>12:35の桟橋着を目安（早着分の余裕あり）</li>
-        <li>12:40便に乗れなかった場合は12:50便でも広島駅14:00着可能（余裕10分程度）</li>
-        <li>1本でも遅れたらタクシー判断</li>
+      <summary>検討メモ（候補・ポイント・保険プラン）</summary>
+      <ul class="memo-list">
+        <li>🍜 ランチ候補：あなごめし（うえの / ふじたや）、牡蠣屋台、紅葉堂の揚げもみじ</li>
+        <li>🍽️ 夕飯第1希望：十升 流川通り店（ウニホーレン1,200円・15時〜）/ 薬研堀店は21時〜注意</li>
+        <li>🍽️ 夕飯第2希望：八昌 薬研堀（食べログ百名店2025）or みっちゃん総本店（八丁堀）</li>
+        <li>🍽️ 夕飯第3希望：あなごめし（薬研堀周辺は少なめ・現地検索推奨）</li>
+        <li>📌 行きフェリーはJR西日本側に並ぶ（9:10〜16:10は大鳥居便）</li>
+        <li>📌 弥山ロープウェイは今回見送り（半日以上必要）</li>
+        <li>🛟 12:40便を逃しても12:50便で広島14:00着が可能（余裕10分）</li>
       </ul>
     </details>
   </div>
 
 </main>
 
-<footer>広島・宮島 日帰りプラン 2026-05-16</footer>
+<footer>広島・宮島 観光記録 2026-05-16</footer>
 
 </body>
 </html>
